@@ -63,6 +63,7 @@ Acesse o site hospedado: [Ver projeto](https://gustavoribeirodeoliveira.github.i
 
 3. **Veja a temperatura em tempo real!**
    - Temperatura atual
+   - horario da região
    - Condições do clima
    - Umidade e vento
    - Sensação térmica
