@@ -48,38 +48,69 @@ weather-app/
 
 ## 🚀 Como usar
 
-### Opção 1: Acessar Online
+### Acessar Online
 
 Acesse o site hospedado: [Ver projeto](https://gustavoribeirodeoliveira.github.io/weather-app)
 
-### Opção 2: Rodar Localmente
+### Passo a passo:
+
+1. **Faça login ou cadastre-se**
+   - Use qualquer email e senha para testar
+   - Os dados ficam salvos no navegador
+
+2. **Digite o nome de uma cidade**
+   - Exemplo: "São Paulo", "Rio de Janeiro", "Tokyo"
+
+3. **Veja a temperatura em tempo real!**
+   - Temperatura atual
+   - Condições do clima
+   - Umidade e vento
+   - Sensação térmica
+
+### Rodar Localmente (Para Desenvolvedores)
+
+Se quiser rodar no seu computador:
 
 1. Clone o repositório:
 ```bash
 git clone https://github.com/GustavoRibeirodeoliveira/weather-app.git
 ```
 
-2. Entre na pasta:
-```bash
-cd weather-app
-```
+2. Abra o arquivo `index.html` no navegador
 
-3. **(Se usar API)** Configure sua API Key no arquivo `weather.js`:
-```javascript
-const API_KEY = 'SUA_CHAVE_AQUI';
-```
-
-4. Abra o `index.html` no navegador
-
-**Ou** use um servidor local:
+3. **(Opcional)** Use um servidor local:
 ```bash
 # Com Python
 python -m http.server 8000
 
-# Com Node.js (http-server)
+# Com Node.js
 npx http-server
 ```
 
+4. **Se usar API própria:** Substitua a chave no `weather.js`:
+```javascript
+const API_KEY = 'SUA_CHAVE_AQUI';
+```
+```
+
+---
+
+## **🎯 DIFERENÇA:**
+
+**❌ ANTES (muito técnico):**
+```
+Clone o repositório
+Configure API Key
+Entre na pasta
+Rode servidor local
+```
+
+**✅ AGORA (focado no usuário):**
+```
+1. Acesse o site
+2. Faça login
+3. Digite uma cidade
+4. Veja a temperatura!
 ## 📸 Screenshots
 
 ### Tela de Login
