@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <link rel="shortcut icon" href="weather-forecast.ico" type="image/x-icon">
+
+  <title>Cadastro — Plataforma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="left-panel" aria-hidden="true">
+      <div class="brand">
+        <h1>Plataforma</h1>
+      </div>
+
+      <div class="hero">
+        <h2>Crie sua conta</h2>
+        <p>Acesso rápido ao painel de previsão do tempo.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Criar conta</h2>
+
+     <form id="registerForm" novalidate>
+
+  <label class="field">
+    <span class="label-text">Nome de Usuário</span>
+    <div class="input-wrap">
+      <input id="regUsername" type="text" placeholder="Seu nome de usuário" required />
+    </div>
+  </label>
+
+  <label class="field">
+    <span class="label-text">Email</span>
+    <div class="input-wrap">
+      <input id="regEmail" type="email" placeholder="seu@exemplo.com" required />
+    </div>
+  </label>
+
+  <label class="field">
+    <span class="label-text">Senha</span>
+    <div class="input-wrap">
+      <input id="regPassword" type="password" placeholder="••••••••" required />
+    </div>
+  </label>
+
+  <button class="btn primary" type="button" onclick="register()">Criar conta</button>
+
+  <div id="regFeedback" class="feedback"></div>
+
+</form>
+
+      <footer class="card-footer">
+        <a href="index.html">Já tenho conta</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

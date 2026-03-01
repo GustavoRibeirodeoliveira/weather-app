@@ -1,0 +1,552 @@
+/* ------------------------------
+    RESET
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+  background: #0f0f10;
+  color: #f5f5f5;
+}
+
+/* ------------------------------
+    LAYOUT PRINCIPAL
+------------------------------ */
+.wrap {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  width: 40%;
+  background: linear-gradient(135deg, #194964, #bbbab3);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  border-right: 1px solid #c2bbbb;
+}
+
+.left-panel .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.left-panel h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.hero h2 {
+  font-size: 30px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.features .feat strong {
+  color: #b5cfecfb;
+  font-size: 20px;
+}
+
+/* ------------------------------
+    CARD LOGIN / CADASTRO
+------------------------------ */
+.card {
+  width: 60%;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+/* ------------------------------
+    CAMPOS DE FORMULÁRIO
+------------------------------ */
+.field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label-text {
+  font-size: 15px;
+  color: #cfcfcf;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap input {
+  width: 100%;
+  padding: 14px 45px 14px 14px;
+  border-radius: 10px;
+  background: #1a1616;
+  border: 3px solid #696969;
+  color: #ffffff;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.input-wrap input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 8px #8a8a8a7a;
+}
+
+.icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+/* Botão para mostrar senha */
+.toggle-pwd {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 5;  /* ← AQUI ESTÁ A CORREÇÃO */
+  pointer-events: all; /* força receber o clique */
+}
+
+
+/* ------------------------------
+    FORÇA DA SENHA
+------------------------------ */
+.pwd-strength {
+  display: flex;
+  gap: 6px;
+}
+
+.pwd-strength .bar {
+  height: 4px;
+  width: 33%;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* ------------------------------
+    BOTÕES
+------------------------------ */
+.btn {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn.primary {
+  background: #486b97;
+  color: #fff;
+  border: solid 3px white;
+}
+
+.btn.primary:hover {
+  background: #3c4055;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #ccc;
+  border: 4px solid #3d3d3d;
+}
+
+.btn.ghost:hover {
+  background: rgba(230, 18, 18, 0.05);
+}
+
+/* Loader do botão */
+.loader {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.btn.loading .btn-text {
+  display: none;
+}
+
+.btn.loading .loader {
+  display: block;
+  animation: spin 1s linear infinite;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------------------
+    FEEDBACK
+------------------------------ */
+.feedback {
+  margin-top: 10px;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+/* ------------------------------
+    FOOTER DO CARD
+------------------------------ */
+.card-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #b5b5b5;
+}
+
+.card-footer a {
+  color: #6731e4;
+  text-decoration: none;
+}
+
+/* ------------------------------
+    RESPONSIVO
+------------------------------ */
+@media (max-width: 880px) {
+  .wrap {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+  }
+}
+
+/* ------------------------------
+    DASHBOARD
+------------------------------ */
+.dashboard {
+  padding: 10px;
+}
+
+.dash-header {
+   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: #3B4C63;
+  border-bottom: 2px solid #f8f8f8;
+
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+.dash-header h1 {
+  font-size: 26px;
+  color: #fdfdfd;
+}
+
+.dash-content {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  background: #1b1c1f;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+}
+
+.weather-card {
+  background: #1b1c1f;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  max-width: 380px;
+  line-height: 1.6;
+}
+
+
+/* ------------------------------------------------------------------
+   CENTRALIZAÇÃO DO DASHBOARD
+------------------------------------------------------------------ */
+
+
+.dash-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;  
+  padding-top: 20px;
+}
+
+
+/* Linha com input + botão */
+.search-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+/* Input grande e centralizado */
+.search-row input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  background: #1b1c1f;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  max-width: 700px;
+}
+
+/* Resultado centralizado */
+.weather-card {
+  background: #1b1c1f;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  text-align: center;
+  width: 100%;
+  max-width: 550px;
+  margin-top: 10px;
+}
+
+ 
+/* ------------------------------
+      BARRA DE FAVORITOS
+------------------------------ */
+.favorites-bar {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.favorites-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.favorite-item {
+  background: #1b1c1f;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.favorite-item span {
+  font-size: 15px;
+}
+
+.remove-fav {
+  background: none;
+  color: #ff5a5a;
+  border: none;
+  font-size: 18px;
+    font-weight: bold;
+  cursor: pointer;
+    transition: 0.2s ease;
+
+}
+
+
+/* ------------------------------
+   FAVORITOS — CARD
+------------------------------ */
+
+.favorites-card {
+  background: #1b1c1f;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.favorites-card h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* Lista de favoritos */
+.favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  
+}
+
+/* Botões dos favoritos */
+.fav-btn {
+  background: #1a1919;
+  padding: 10px 16px;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.fav-btn:hover {
+  background: #467074;
+  transform: scale(1.05);
+}
+/* ------------------------------
+   USER MENU / PERFIL
+------------------------------ */
+
+.user-menu {
+  position: relative;
+}
+
+.user-icon {
+  width: 42px;
+  height: 42px;
+  background: #3070f8;
+  color: white;
+  border:solid 2px rgb(190, 190, 197) ;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.user-icon:hover {
+  background: #87b8e0;
+}
+
+/* Dropdown */
+.user-dropdown {
+  position: absolute;
+  top: 55px;
+
+  left: 50%;                
+  transform: translateX(-50%);   
+
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1b1c1f;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  z-index: 50;
+}
+
+.hidden {
+  display: none;
+}
+
+.logout-btn {
+ width: 68%;
+  padding: 8px;
+  border-radius: 4px; /* quase quadrado */
+  border: 1px solid #3a3a3a;
+  background: #145479;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: #495c77;
+}
+/* Wrapper da caixa de busca */
+.search-row {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Input centralizado */
+.search-row input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: #1b1c1f;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Botão embaixo */
+.search-btn-wrapper {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-btn-wrapper .btn {
+  width: 100px; /* opcional */
+  padding: 13px;
+}
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  display: block;
+}
+#addFavoriteBtn {
+  margin-top: 15px;
+}

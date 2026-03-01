@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <link rel="shortcut icon" href="weather-forecast.ico" type="image/x-icon">
+
+  <title>Login — Plataforma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="left-panel" aria-hidden="true">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L20 8 L12 14 L4 8 Z" /></svg>
+        <h1>Plataforma</h1>
+      </div>
+
+      <div class="hero">
+        <h2>Bem-vindo de volta!</h2>
+        <p>Entre para acessar seu painel. Segurança e performance em um só lugar.</p>
+      </div>
+
+      <div class="features">
+        <div class="feat">
+          <strong>Segurança</strong>
+          <span>Autenticação e boas práticas</span>
+        </div>
+        <div class="feat">
+          <strong>Performance</strong>
+          <span>Carregamento rápido e fluido</span>
+        </div>
+        <div class="feat">
+          <strong>Design</strong>
+          <span>UX moderno e acessível</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="login-title">
+      <h2 id="login-title" class="card-title">Entrar na sua conta</h2>
+
+      <form id="loginForm" novalidate>
+        <label class="field">
+          <span class="label-text">Email</span>
+          <div class="input-wrap">
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="seu@exemplo.com" required aria-describedby="emailHelp" />
+            <span class="icon" aria-hidden="true">📧</span>
+          </div>
+          <small id="emailHelp" class="hint" aria-live="polite"></small>
+        </label>
+
+        <label class="field">
+          <span class="label-text">Senha</span>
+          <div class="input-wrap">
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" minlength="6" required aria-describedby="pwdHelp" />
+            <button type="button" class="toggle-pwd" aria-label="Mostrar senha">👁️</button>
+          </div>
+          <small id="pwdHelp" class="hint" aria-live="polite"></small>
+
+          <div class="pwd-strength" aria-hidden="true">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </label>
+
+        <label class="row">
+          <div class="checkbox">
+            <input id="remember" type="checkbox" />
+            <label for="remember">Lembrar-me</label>
+          </div>
+
+          <a href="#" class="forgot">Esqueci a senha</a>
+        </label>
+
+        <div class="actions">
+          <button id="submitBtn" class="btn primary" type="button" onclick="login()">
+            <span class="btn-text">Entrar</span>
+            <svg class="loader" viewBox="0 0 50 50" aria-hidden="true"><circle cx="25" cy="25" r="20" /></svg>
+          </button>
+
+          <button id="demoBtn" type="button" class="btn ghost">Entrar com demo</button>
+        </div>
+
+        <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+      </form>
+
+      <footer class="card-footer">
+        <span>Não tem conta? <a href="cadastro.html">Criar conta</a></span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

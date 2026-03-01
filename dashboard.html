@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="temperatura.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>TheWeatherS- Painel do tempo</title>
+</head>
+
+<body class="dashboard">
+
+  <header class="dash-header">
+    <h1>TheWeatherS 🌤️</h1>
+    <h2> Previsão do Tempo</h2>
+
+    <div class="user-menu">
+  <div class="user-icon" id="userIcon"></div>
+
+  <div class="user-dropdown hidden" id="userDropdown">
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+</div>
+  </header>
+
+  <!-- MAIN CORRETAMENTE FECHADO -->
+  <main class="dash-center">
+
+    <h2>Buscar clima pela Cidade/Estado/País</h2>
+
+    <div class="search-row">
+      <input id="cityInput" type="text" placeholder="Digite sua cidade..." />
+    </div>
+
+    <div class="search-btn-wrapper">
+      <button class="btn primary" onclick="getWeather()">Buscar</button>
+    </div>
+
+    <div id="weatherResult" class="weather-card"></div>
+
+    <button id="addFavoriteBtn" class="btn primary" style="display:none; margin-top:20px;">
+      Adicionar aos Favoritos ⭐
+    </button>
+
+    <div id="favoritesBar" class="favorites-card">
+      <h3>⭐ Favoritos</h3>
+      <div id="favoritesList" class="favorites-list"></div>
+    </div>
+
+  </main>
+
+  <script src="weather.js"></script>
+  <script src="auth.js"></script>
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const icon = document.getElementById("userIcon");
+  console.log("ICON:", icon);
+
+  icon.addEventListener("click", () => {
+    console.log("CLIQUE FUNCIONOU");
+  });
+});
+</script>
+</body>
+</html>

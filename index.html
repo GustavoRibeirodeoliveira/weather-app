@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="shortcut icon" href="weather-forecast.ico" type="image/x-icon">
+
+  <title>TheWeatherS</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <main class="wrap">
+    <section class="left-panel" aria-hidden="true">
+      <div class="brand">
+         <h1>☁️TheWeatherS</h1>
+      </div>
+
+      <div class="hero">
+        <h2>Bem-vindo!</h2>
+        <p>Acesse seu painel de clima com segurança.</p>
+      </div>
+
+      <div class="features">
+        
+        <div class="feat"><strong>Rápido e facíl </strong><span> Sua previsão de confiança, em qualquer lugar!</span></div>
+        <div class="feat"><strong>Informação segura </strong><span>Previsões claras!</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Entrar na sua conta</h2>
+
+      <form id="loginForm" novalidate>
+        <label class="field">
+          <span class="label-text">Email</span>
+          <div class="input-wrap">
+            <input id="email" type="email" placeholder="seu@exemplo.com" required />
+            <span class="icon">📧</span>
+          </div>
+        </label>
+
+        <label class="field">
+          <span class="label-text">Senha</span>
+          <div class="input-wrap">
+            <input id="password" type="password" placeholder="••••••••" required />
+            <button type="button" class="toggle-pwd">👁️</button>
+          </div>
+        </label>
+
+        <div class="actions">
+          <button id="submitBtn" class="btn primary" type="button" onclick="login()">
+            <span class="btn-text">Entrar</span>
+            <svg class="loader" viewBox="0 0 50 50"><circle cx="25" cy="25" r="20"/></svg>
+          </button>
+        </div>
+
+        <div class="feedback" id="feedback"></div>
+      </form>
+
+      <footer class="card-footer">
+        <span>Não tem conta? <a href="cadastro.html">Criar conta</a></span>
+      </footer>
+    </section>
+  </main>
+
+
+  <script src="auth.js"></script>
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const pwdInput = document.getElementById("password");
+  const toggleBtn = document.querySelector(".toggle-pwd");
+
+  toggleBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (pwdInput.type === "password") {
+      pwdInput.type = "text";
+      toggleBtn.textContent = "🙈";
+    } else {
+      pwdInput.type = "password";
+      toggleBtn.textContent = "👁️";
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>
