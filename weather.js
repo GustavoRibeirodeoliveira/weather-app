@@ -3,9 +3,7 @@ const API_KEY = "2564e13205f9d14c9e12233b5e83b823";
 let lastCityData = null;
 
 
-// ==========================================
-// BUSCAR CLIMA
-// ==========================================
+ 
 
 async function getWeather() {
 
@@ -45,8 +43,7 @@ async function getWeather() {
       minute: "2-digit",
       second: "2-digit"
     });
-
-    // =============================
+ 
 
     resultDiv.innerHTML = `
       <h2>${data.name}, ${data.sys.country}</h2>
@@ -146,5 +143,6 @@ function loadFavorites() {
     favoritesList.appendChild(container);
 
   });
+
 
 }
